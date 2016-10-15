@@ -4,8 +4,8 @@ function Player(name, points) {
 }
 
 Player.prototype.addPoints = function() {
-  var points = 0;
-  this.points += 5;
+  var pointsInput = $("#points-input").val();
+  this.points += parseInt(pointsInput);
   console.log("adding points");
 }
 

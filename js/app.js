@@ -12,9 +12,7 @@ $(".add-player-button").click(function() {
 
   //Create player
   var newPlayer = new Player($playerNameInput, 0);
-  console.log(newPlayer);
   allPlayers.push(newPlayer);
-  console.log(allPlayers);
 
   //Add player to player list
   addPlayerHTML(newPlayer);
@@ -31,23 +29,33 @@ $("#player-name").click(function() {
 
 $("#add-points-button").click(function() {
   var pointsInput = $("#points-input").val();
-  console.log(pointsInput);
 });
 
+var pointsHTML = "<tr><td class='add-points'><div class='input-group'><span class='input-group-addon basic-addon1 add-points-button'><span class='glyphicon glyphicon-plus'></span></span><input type='text' class='form-control' placeholder='Points' aria-describedby='basic-addon1' id='points-input'></div></td></tr>"
+
+//Click handler for player names
+var selectedPlayer;
 $(document).on("click", ".player-name", function() {
-  var selectedPlayer = $(this).text();
-  console.log("Player has been clicked: " + selectedPlayer);
-  console.log("AllPlayers are " + allPlayers);
+  $(this).parent().append(pointsHTML);
+  selectedPlayer = $(this).text();
+  console.log("The selected Player is " + selectedPlayer)
+});
+
+//Click handler for adding points button
+
+$(document).on("click", ".add-points-button", function() {
+  console.log("Add points button was clicked");
+  console.log(allPlayers);
+  console.log(selectedPlayer);
   for (var i = 0; i < allPlayers.length; i++) {
     if (allPlayers[i].name === selectedPlayer) {
       allPlayers[i].addPoints();
       console.log("Player's points are " + allPlayers[i].points);
     }
   }
-});
+})
 
 $(document).on("click", ".remove-button", function() {
-
   var selectedPlayer = $(this).next().next().text();
   //Remove player from allPlayers array
   for (var i = 0; i < allPlayers.length; i++) {
