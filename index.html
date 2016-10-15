@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UNO Counter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="jumbotron">
+      <div class="players">
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default list-group">
+              <table class="table" id="players-table">
+                <tr class="player-row">
+                  <th></th>
+                  <th>#</th>
+                  <th>Player</th>
+                  <th>Points</th>
+                </tr>
+                <tr class="player-row">
+                  <td class="remove-button"><span class="glyphicon glyphicon-remove-circle"></span></td>
+                  <td>1</td>
+                  <td class="player-name">Brendan</td>
+                  <td>36</td>
+                </tr>
+                <tr class="player-row">
+                  <td class="remove-button"><span class="glyphicon glyphicon-remove-circle"></span></td>
+                  <td>2</td>
+                  <td class="player-name">Eddy</td>
+                  <td>83</td>
+                </tr>
+                <tr class="player-row">
+                  <td class="remove-button"><span class="glyphicon glyphicon-remove-circle"></span></td>
+                  <td>3</td>
+                  <td class="player-name">Ahmed</td>
+                  <td>123</td>
+                </tr>
+              </table>
+                <!--tr>
+                  <td></td>
+                  <td></td>
+                  <td id="add-player"><span class="glyphicon glyphicon-plus"></span> Add Player</td>
+                </tr-->
+                <table class="table">
+                <tr>
+                  <td><span class="glyphicon glyphicon-remove-circle"></span></td>
+                  <td>3</td>
+                  <td class="add-player">
+                    <div class="input-group">
+                    <span class="input-group-addon basic-addon1 add-player-button"><span class="glyphicon glyphicon-plus"></span></span>
+                    <input type="text" class="form-control" placeholder="Player Name" aria-describedby="basic-addon1" id="player-name-input">
+                    </div></td>
+                    <td></td>
+                </tr>
+                <!-- tr>
+                  <td></td>
+                  <td></td>
+                  <td id="add-points">
+                    <div class="input-group">
+                    <span class="input-group-addon basic-addon1 add-points-button"><span class="glyphicon glyphicon-plus add-points-button"></span></span>
+                    <input type="text" class="form-control" placeholder="Points" aria-describedby="basic-addon1" id="points-input">
+                    </div>
+                  </td>
+                  <td></td>
+                </tr-->
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"></div>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="/js/players.js"></script>
+  </body>
+</html>

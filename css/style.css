@@ -1,0 +1,22 @@
+#add-player {
+  color: #66c2ff;
+
+}
+
+.header {
+  height: 200px;
+  background: url(https://i.ytimg.com/vi/mO7pA7UlJKw/maxresdefault.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+th {
+  color: grey;
+}
+
+.remove-button {
+  color: grey;
+}
+
+.jumbotron {
+  background-color: #ffffff;
+}
