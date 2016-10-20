@@ -108,24 +108,13 @@ $(document).ready(function() {
     //Remove player from frontend
     $(this).parent().remove();
     $(".points-html").remove();
-  })
+  });
 
-
-  /*
-  var game = {
-
-  players: [];
-  addPlayer: function() {};
-  addPoints: function() {};
-
-}
-*/
-
-/*
-$('body').click(function(e) {
-console.log(e.target);
-});
-*/
-
+  $(document).on("click", ".reset-button", function() {
+    allPlayers = [];
+    $(".player-row").remove();
+    console.log("Reset has been clicked");
+    console.log(allPlayers);
+  });
 
 }); //end ready

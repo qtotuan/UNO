@@ -3,6 +3,16 @@
 
 }
 
+.footer {
+  width: 100%;
+}
+
+.reset-button {
+  background-color: white;
+  border-color: #D3D3D3;
+  float: right;
+}
+
 .header {
   height: 200px;
   background: url(https://i.ytimg.com/vi/mO7pA7UlJKw/maxresdefault.jpg) no-repeat center center;
