@@ -4,9 +4,12 @@ function Player(name, points) {
 }
 
 Player.prototype.addPoints = function() {
-  var pointsInput = $("#points-input").val();
-  this.points += parseInt(pointsInput);
-  console.log("adding points");
+  var pointsInput = parseInt($("#points-input").val());
+  var TESTisNaN = isNaN(pointsInput);
+  if (TESTisNaN) {
+    alert("Please input points");
+    return false;
+  }
+  this.points += pointsInput;
 }
-
-var allPlayers = [];
+//allPlayers = [{name: "A", points:1}, {name: "C", points:3}, {name: "B", points: 2},];
